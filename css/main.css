@@ -1,0 +1,150 @@
+:root {
+  --primary-font-family: "Montserrat", sans-serif;
+  --secondary-font-family: "Seymour One", sans-serif;
+  --third-font-family: "DM Sans", sans-serif;
+  --primary-text-color: #FCFCFC;
+  --secondary-text-color: #131313;
+  --text-color-darck: #000000;
+  --text-color-light: #ffffff;
+  --footer-text-color: #7A7A7A;
+  --accent-color: #F8D24E;
+  --btn-color-hover: #0A8817;
+  --btn-color-disable: #ABABAB;
+  --section-background-color: #84A178;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--primary-font-family);
+  color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+.mobile-menu-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.mobile-menu-btn__icon {
+  fill: #ffffff;
+}
+
+.hero-header {
+  position: relative;
+  height: 502px;
+  background-color: #85a279;
+  padding-top: 12px;
+}
+
+.logo-img {
+  fill: #f8d24e;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-header__title {
+  width: 247px;
+  font-family: var(--secondary-font-family);
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+
+.hero-header__title-passion {
+  font-size: 33px;
+  line-height: 96.5%;
+}
+
+.hero-img {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 60px;
+}
+
+.hero-points {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  fill: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .hero-header {
+    height: 415px;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,50 @@
+.hero-header {
+  position: relative;
+  height: 502px;
+  background-color: #85a279;
+  padding-top: 12px;
+}
+
+.logo-img {
+  fill: #f8d24e;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-header__title {
+  width: 247px;
+  font-family: var(--secondary-font-family);
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+
+.hero-header__title-passion {
+  font-size: 33px;
+  line-height: 96.5%;
+}
+
+.hero-img {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 60px;
+}
+.hero-points {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  fill: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .hero-header {
+    height: 415px;
+}
+}

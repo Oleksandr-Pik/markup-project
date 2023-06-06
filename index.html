@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IceCream</title>
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Нормалізація стилів -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Таблиця стилів -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="hero-header">
+      <div class="container hero-header__container">
+        <nav class="site-nav">
+          <a class="site-logo" href="./index.html" aria-label="site logo">
+            <!-- <img src="./images/logo.png" alt="site logo"> -->
+            <svg class="logo-img" width="40" height="37">
+              <use href="./images/spite.svg#logo"></use>
+            </svg>
+          </a>
+          <button type="button" class="mobile-menu-btn">
+            <svg class="mobile-menu-btn__icon" width="32" height="32">
+              <use href="./images/spite.svg#burger-menu"></use>
+            </svg>
+          </button>
+        </nav>
+        <h1 class="hero-header__title">
+          ice cream made with
+          <span class="hero-header__title-passion">passion</span>
+        </h1>
+        <a class="link" href="#">Products</a>
+        <a class="link" href="#">How it’s made?</a>
+        <picture>
+          <source
+            srcset="
+              ./images/hero-mobile-img.webp    1x,
+              ./images/hero-mobile-img@2x.webp 2x
+            "
+            media="(max-width: 479px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero-mobile-img.png    1x,
+              ./images/hero-mobile-img@2x.png 2x
+            "
+            media="(max-width: 479px)"
+          />
+          <img
+            class="hero-img"
+            src="./images/hero-mobile-img.png"
+            alt="icecream"
+          />
+        </picture>
+        <svg class="hero-points" width="320" height="50">
+          <use href="./images/spite.svg#points"></use>
+        </svg>
+      </div>
+    </header>
+  </body>
+</html>
