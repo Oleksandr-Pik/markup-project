@@ -1,0 +1,35 @@
+.modal-btn {
+  padding: 12px 36px;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  background-color: var(--accent-color);
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  // text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: background-color 250ms ease, border-color 250ms ease;
+
+  &:hover {
+    background-color: var(--btn-color-hover);
+    border-color: var(--btn-color-hover) ;
+  }
+  &:focus {
+    background-color: var(--btn-color-hover);
+    border-color: var(--btn-color-hover);
+    color: #ffffff
+    ;
+  }
+}
+
+// .modal-btn_theme_light {
+//   color: var(--secondary-text-color-theme-light);
+// }
+
+// .modal-btn_theme_dark {
+//   color: var(--secondary-text-color-theme-dark);
+// }

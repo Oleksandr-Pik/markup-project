@@ -1,7 +1,7 @@
 .hero-header {
   position: relative;
   height: 502px;
-  background-color: #85a279;
+  background-color: var(--section-background-color);
   padding-top: 12px;
 }
 
@@ -12,6 +12,34 @@
 .site-nav {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.hero-header__link-list {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+}
+
+.hero-header__link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-header__link_produkts {
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 11px 26px;
+  color: var(--text-color-darck );
+  margin-right: 12px;
+}
+
+.hero-header__link_how-its-made {
+  color: var(--accent-color);
+
 }
 
 .hero-header__title {
@@ -22,6 +50,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--primary-text-color);
+  margin-bottom: 32px;
 }
 
 .hero-header__title-passion {
@@ -46,5 +75,5 @@
 @media screen and (min-width: 480px) {
   .hero-header {
     height: 415px;
-}
+  }
 }

@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="hero-header">
+    <header class="hero-header" id="home">
       <div class="container hero-header__container">
         <nav class="site-nav">
           <a class="site-logo" href="./index.html" aria-label="site logo">
@@ -34,7 +34,7 @@
               <use href="./images/spite.svg#logo"></use>
             </svg>
           </a>
-          <button type="button" class="mobile-menu-btn">
+          <button type="button" class="mobile-menu-btn js-open-menu">
             <svg class="mobile-menu-btn__icon" width="32" height="32">
               <use href="./images/spite.svg#burger-menu"></use>
             </svg>
@@ -44,8 +44,20 @@
           ice cream made with
           <span class="hero-header__title-passion">passion</span>
         </h1>
-        <a class="link" href="#">Products</a>
-        <a class="link" href="#">How it’s made?</a>
+        <ul class="hero-header__link-list list">
+          <li>
+            <a
+              href="#"
+              class="hero-header__link hero-header__link_produkts link"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hero-header__link hero-header__link_how-its-made"
+              >How it’s made?</a
+            >
+          </li>
+        </ul>
         <picture>
           <source
             srcset="
@@ -72,6 +84,52 @@
           <use href="./images/spite.svg#points"></use>
         </svg>
       </div>
+
+      <!-- MOBILE MENU -->
+      <div class="mobile-menu-container container js-menu-container">
+        <a class="site-logo" href="./index.html" aria-label="site logo">
+          <!-- <img src="./images/logo.png" alt="site logo"> -->
+          <svg class="logo-img" width="40" height="37">
+            <use href="./images/spite.svg#logo"></use>
+          </svg>
+        </a>
+        <button type="button" class="mobile-menu__close-btn js-close-menu">
+          <svg class="mobile-menu__close-icon" width="32" height="32">
+            <use href="./images/spite.svg#close-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu-wraper">
+          <ul class="mobile-menu list">
+            <li class="mobile-menu-item">
+              <a href="#home" class="mobile-menu-link link">Home</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#" class="mobile-menu-link link">How it’s made?</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#" class="mobile-menu-link link">Our products</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="#" class="mobile-menu-link link">Contact</a>
+            </li>
+          </ul>
+          <button class="modal-btn buy-now-btn" type="button">
+            Buy now
+            <svg class="arrow-right-icon" width="12" height="12">
+              <use href="./images/spite.svg#arrow-right-bold"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
+    <!-- PRODUCTS -->
+    <section class="products section">
+      <div class="container">
+        <h1>ntcn</h1>
+
+      </div>
+    </section>
+
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

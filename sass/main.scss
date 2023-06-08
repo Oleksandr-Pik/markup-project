@@ -4,7 +4,7 @@
 @import "./base/common";
 @import "./base/container";
 
-// @import "./components/section";
+@import "./components/section";
 // @import "./components/logo";
 // @import "./components/main-title";
 // @import "./components/title";
@@ -14,8 +14,10 @@
 // @import "./components/modal-window";
 // @import "./components/contact-form";
 @import "./components/mobile-menu";
+@import './components/modal-btn';
 
 @import "./layout/hero-header";
+@import "./layout/products";
 // @import "./layout/hero";
 // @import "./layout/features";
 // @import "./layout/activity";
