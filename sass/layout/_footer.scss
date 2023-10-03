@@ -1,0 +1,9 @@
+.footer {
+    background-color: var(--section-background-color);
+    color: var(--primary-text-color);
+
+    &.section {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+}

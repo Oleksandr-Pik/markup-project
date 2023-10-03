@@ -20,12 +20,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Таблиця стилів -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- HEADER -->
-    <header class="hero-header" id="home">
+    <header class="hero-header" id="header">
       <div class="container hero-header__container">
         <nav class="site-nav">
           <a class="site-logo" href="./index.html" aria-label="site logo">
@@ -40,20 +42,23 @@
             </svg>
           </button>
         </nav>
-        <h1 class="hero-header__title">
+
+        <h1 class="hero-header__title" data-aos="flip-down">
           ice cream made with
           <span class="hero-header__title-passion">passion</span>
         </h1>
         <ul class="hero-header__link-list list">
-          <li>
+          <li data-aos="fade-right" data-aos-duration="500">
             <a
-              href="#"
+              href="#products"
               class="hero-header__link hero-header__link_produkts link"
               >Products</a
             >
           </li>
-          <li>
-            <a href="#" class="hero-header__link hero-header__link_how-its-made"
+          <li data-aos="fade-left" data-aos-duration="1000">
+            <a
+              href="#about"
+              class="hero-header__link hero-header__link_how-its-made"
               >How it’s made?</a
             >
           </li>
@@ -80,9 +85,17 @@
             alt="icecream"
           />
         </picture>
-        <svg class="hero-points" width="320" height="50">
-          <use href="./images/spite.svg#points"></use>
-        </svg>
+        <div
+          class="hero-points"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000"
+        >
+          <svg width="320" height="50">
+            <use href="./images/spite.svg#points"></use>
+          </svg>
+        </div>
       </div>
 
       <!-- MOBILE MENU -->
@@ -98,19 +111,21 @@
             <use href="./images/spite.svg#close-menu"></use>
           </svg>
         </button>
-        <div class="mobile-menu-wraper">
+        <nav class="mobile-menu-wraper">
           <ul class="mobile-menu list">
             <li class="mobile-menu-item">
-              <a href="#home" class="mobile-menu-link link">Home</a>
+              <a href="#header" class="mobile-menu-link link">Home</a>
             </li>
             <li class="mobile-menu-item">
-              <a href="#" class="mobile-menu-link link">How it’s made?</a>
+              <a href="#about" class="mobile-menu-link second-link link"
+                >How it’s made?</a
+              >
             </li>
             <li class="mobile-menu-item">
-              <a href="#" class="mobile-menu-link link">Our products</a>
+              <a href="#products" class="mobile-menu-link link">Our products</a>
             </li>
             <li class="mobile-menu-item">
-              <a href="#" class="mobile-menu-link link">Contact</a>
+              <a href="#contacts" class="mobile-menu-link link">Contact</a>
             </li>
           </ul>
           <button class="modal-btn buy-now-btn" type="button">
@@ -119,17 +134,348 @@
               <use href="./images/spite.svg#arrow-right-bold"></use>
             </svg>
           </button>
-        </div>
+        </nav>
       </div>
     </header>
-    <!-- PRODUCTS -->
-    <section class="products section">
-      <div class="container">
-        <h1>ntcn</h1>
 
+    <!-- PRODUCTS -->
+    <section class="products section" id="products">
+      <div class="container">
+        <p class="undertitle">100% natural</p>
+        <h1 class="title">products</h1>
+        <ul class="products__list list">
+          <li class="products__card products__card--green">
+            <!-- <div class="products__card-image">
+              <img src="./images/customer-foto1@2x.png" alt="">
+            </div> -->
+            <h2 class="products__header">ice cream</h2>
+            <p class="products__descr">
+              Soft ice cream with a delicate taste. Made with milk, cream, sugar
+              and natural stabilizer
+            </p>
+            <button type="button" class="products__btn">
+              <svg class="arrow-right-icon" width="40" height="16">
+                <use href="./images/spite.svg#arrow"></use>
+              </svg>
+            </button>
+          </li>
+
+          <li class="products__card products__card--yellow">
+            <!-- <div class="products__card-image">
+              <img src="./images/customer-foto1@2x.png" alt="">
+            </div> -->
+            <h2 class="products__header">ice coffee</h2>
+            <p class="products__descr">
+              Fragrant invigorating drink created from 100% natural ingredients
+              without the use of preservatives and flavor enhancers
+            </p>
+            <button type="button" class="products__btn">
+              <svg class="arrow-right-icon" width="40" height="16">
+                <use href="./images/spite.svg#arrow"></use>
+              </svg>
+            </button>
+          </li>
+
+          <li class="products__card products__card--red">
+            <!-- <div class="products__card-image">
+              <img src="./images/customer-foto1@2x.png" alt="">
+            </div> -->
+            <h2 class="products__header">milkshakes</h2>
+            <p class="products__descr">
+              Sweet drinks based on milk and ice cream, supplemented with
+              syrups, fruits, berries and other sweets of your choice
+            </p>
+            <button type="button" class="products__btn">
+              <svg class="arrow-right-icon" width="40" height="16">
+                <use href="./images/spite.svg#arrow"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <!-- ABOUT (how it’s made?) -->
+    <section class="about section" id="about">
+      <div class="container">
+        <p class="undertitle">tradition and love</p>
+        <h1 class="about__title title">how it’s made?</h1>
+        <div>
+          <div class="about__decor-img">
+            im
+          </div>
+          <div class="about__text-wrapper">
+            <p class="about__text">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts.
+            </p>
+            <p class="about__text">
+              We use traditional recipes and 100% natural ingredients. Our
+              products are so natural that they can be given to children from
+              the age of three years. Sweets lovers can expect 55 types of ice
+              cream, 15 types of coffee and 23 milkshakes.
+            </p>
+            <p class="about__text">
+              This is enough to choose ice cream and coffee for any mood!
+            </p>
+            <button type="button" class="modal-btn">
+              Read more
+              <svg class="arrow-right-icon" width="12" height="12">
+                <use href="./images/spite.svg#arrow-right-bold"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages section">
+      <div class="container">
+        <h1 class="visually-hidden">Advantages</h1>
+        <ul class="advantages-list list">
+          <li class="advantages-list-item">
+            <p class="advantages-digital-value">721</p>
+            <p class="advantages-description">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+          <li class="advantages-list-item">
+            <p class="advantages-digital-value">16kg</p>
+            <p class="advantages-description">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+          <li class="advantages-list-item">
+            <p class="advantages-digital-value">84</p>
+            <p class="advantages-description">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section">
+      <div class="container">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery-mobile-img1.webp    1x,
+              ./images/gallery-mobile-img1@2x.webp 2x
+            "
+            media="(max-width: 479px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/gallery-mobile-img1.jpg    1x,
+              ./images/gallery-mobile-img1@2x.jpg 2x
+            "
+            media="(max-width: 479px)"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery-mobile-img1.jpg"
+            alt="icecream"
+          />
+        </picture>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews section">
+      <div class="container">
+        <h1 class="visually-hidden">Customer reviews</h1>
+        <ul class="customers-reviews-list list">
+          <li class="customers-reviews-list-item">
+            <picture>
+              <source
+                srcset="
+                  ./images/customer-foto1.webp    1x,
+                  ./images/customer-foto1@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/customer-foto1.png    1x,
+                  ./images/customer-foto1@2x.png 2x
+                "
+              />
+              <img
+                class="customer-foto"
+                src="./images/customer-foto1.png"
+                alt="icecream"
+              />
+            </picture>
+            <p class="customer-reviev">
+              I love visiting your cafe. You prepare the most delicious ice
+              cream in Los Angeles! In addition, you have beautiful serving,
+              cozy atmosphere and polite staff.
+            </p>
+            <p class="customer-name">Emily, Los Angeles</p>
+          </li>
+          <!-- <li class="customers-reviews__list-item">
+            <img src="" alt="customer foto" class="customer-foto" />
+            <p class="customer-reviev"></p>
+            <p class="customer-name"></p>
+          </li>
+          <li class="customers-reviews__list-item">
+            <img src="" alt="customer foto" class="customer-foto" />
+            <p class="customer-reviev"></p>
+            <p class="customer-name"></p>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <h1 class="visually-hidden">Contacts</h1>
+        <ul class="company-representations list">
+          <li class="company-representation-card">
+            <p class="representation-category">Cafe</p>
+            <p class="sity">Chicago</p>
+            <p class="address">
+              10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA
+            </p>
+            <ul class="company-representation-schedule list">
+              <li class="company-representation-schedule-item">
+                <p class="schedule-days">Monday - Friday</p>
+                <p class="schedule-time">06:00 AM - 10:00 PM</p>
+              </li>
+              <li class="company-representation-schedule-item">
+                <p class="schedule-days">Saturday - Sunday</p>
+                <p class="schedule-time">08:00 AM - 16:00 PM</p>
+              </li>
+            </ul>
+            <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+            <a class="link" href="mailto:noreply@envato.com"
+              >noreply@envato.com</a
+            >
+          </li>
+
+          <li class="company-representation-card">
+            <p class="representation-category">Foodtruck</p>
+            <p class="sity">Los Angeles</p>
+            <p class="address">
+              1003 Manhattan Ave, Manhattan Beach, CA 90263, USA
+            </p>
+            <ul class="company-representation-schedule list">
+              <li class="company-representation-schedule-item">
+                <p class="schedule-days">Monday - Friday</p>
+                <p class="schedule-time">06:00 AM - 10:00 PM</p>
+              </li>
+              <li class="company-representation-schedule-item">
+                <p class="schedule-days">Saturday - Sunday</p>
+                <p class="schedule-time">08:00 AM - 16:00 PM</p>
+              </li>
+            </ul>
+            <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+            <a class="link" href="mailto:noreply@envato.com"
+              >noreply@envato.com</a
+            >
+          </li>
+
+          <li class="company-representation-card">
+            <p class="representation-category">Cafe</p>
+            <p class="sity">New York</p>
+            <p class="address">726 Sterling Pl, Brooklyn, NY 11222, USA</p>
+            <ul class="company-representation-schedule list">
+              <li class="company-representation-schedule-item">
+                <p class="schedule-days">Monday - Friday</p>
+                <p class="schedule-time">06:00 AM - 10:00 PM</p>
+              </li>
+              <li class="company-representation-schedule-item">
+                <p class="schedule-days">Saturday - Sunday</p>
+                <p class="schedule-time">08:00 AM - 16:00 PM</p>
+              </li>
+              <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+              <a class="link" href="mailto:noreply@envato.com"
+                >noreply@envato.com</a
+              >
+            </ul>
+          </li>
+        </ul>
+        <button class="modal-btn buy-now-btn" type="button">
+          Our Locations
+          <svg class="arrow-right-icon" width="12" height="12">
+            <use href="./images/spite.svg#arrow-right-bold"></use>
+          </svg>
+        </button>
+        <button class="modal-btn buy-now-btn" type="button">
+          Franchise
+          <svg class="arrow-right-icon" width="12" height="12">
+            <use href="./images/spite.svg#arrow-right-bold"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section">
+      <div class="container">
+        <div>
+          <p>homemade ice cream made</p>
+          <p>with passion</p>
+        </div>
+        <div>
+          <ul class="social-link-list list">
+            <li class="">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg class="social-link-icon" width="34" height="34">
+                  <use href="./images/spite.svg#github"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://web.telegram.org"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg class="social-link-icon" width="34" height="34">
+                  <use href="./images/spite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg class="social-link-icon" width="34" height="34">
+                  <use href="./images/spite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p>Feel free to contact</p>
+          <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+        </div>
+      </div>
+
+      <div class="footer-copiright">
+        <p class="footer-copiright-text">© 2022 - IceCream.</p>
+        <p class="footer-copiright-text">All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/mobile-menu.js"></script>
   </body>
 </html>

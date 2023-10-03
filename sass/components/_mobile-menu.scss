@@ -3,8 +3,8 @@
   z-index: 100;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: var(--section-background-color);
   // overflow: auto;
   // pointer-events: none;
@@ -69,7 +69,7 @@
 }
 
 .buy-now-btn {
-  width: fit-content;
+  // width: fit-content;
   // margin-top: auto;
 }
 
@@ -82,10 +82,22 @@
   margin-bottom: 32px
 }
 
+// .mobile-menu-item:nth-child(2) .mobile-menu-link  {
+//   color: #131313;
+// }
+
+
 
 .mobile-menu-link {
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
   color: #fcfcfc;
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: #131313 ;
+  }
+
 }

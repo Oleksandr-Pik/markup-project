@@ -1,7 +1,7 @@
 .hero-header {
   position: relative;
-  height: 502px;
   background-color: var(--section-background-color);
+  height: 502px;
   padding-top: 12px;
 }
 
@@ -35,10 +35,30 @@
   padding: 11px 26px;
   color: var(--text-color-darck );
   margin-right: 12px;
+
+  transition: color 250ms ease, border-color 250ms ease;
+
+  &:hover {
+    border-color: var(--btn-color-hover) ;
+  }
+  &:focus {
+    border-color: var(--btn-color-hover);
+    color: #ffffff;
+    outline: none;
+  }
 }
 
 .hero-header__link_how-its-made {
   color: var(--accent-color);
+  transition: color 250ms ease;
+
+  &:hover {
+    color: var(--btn-color-hover) ;
+  }
+  &:focus {
+    color: #ffffff;
+    outline: none;
+  }
 
 }
 

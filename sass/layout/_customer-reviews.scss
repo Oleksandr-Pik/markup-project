@@ -1,0 +1,16 @@
+.customer-reviews {
+    color: var(--secondary-text-color);
+    background-color: #FCFCFC;
+    background-image: url(../images/backgroud-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: center;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .products {
+      background-image: url(../images/bacground-mobile@2x.jpg);
+    }
+}

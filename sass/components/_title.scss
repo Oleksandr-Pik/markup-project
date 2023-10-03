@@ -1,0 +1,20 @@
+.title {
+  font-family: var(--secondary-font-family);
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  // color: var(--secondary-text-color);
+}
+
+.undertitle {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
